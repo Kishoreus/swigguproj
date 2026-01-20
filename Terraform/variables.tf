@@ -12,6 +12,7 @@ variable "instance_type" {
 
 variable "ami_id" {
   description = "Amazon Linux AMI"
+  default = data.aws_ami.aws_ami_name.id
 }
 
 variable "count" {
