@@ -19,12 +19,3 @@ module "ec2" {
   env             = var.environment
 }
 
-module "s3" {
-  source = "./modules/S3"
-  env    = var.environment
-}
-
-module "dynamo" {
-  source = "./modules/dynamo"
-  env    = var.environment
-}
