@@ -11,7 +11,7 @@ module "sg" {
 
 module "ec2" {
   source          = "./modules/EC2"
-  count           = var.i_count
+  i_count         = var.i_count
   ami_id          = data.aws_ami.aws_ami_name.id
   instance_type   = var.instance_type
   subnet_id       = module.vpc.public_subnet_id
