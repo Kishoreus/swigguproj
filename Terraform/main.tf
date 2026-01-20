@@ -11,6 +11,7 @@ module "sg" {
 
 module "ec2" {
   source          = "./modules/EC2"
+  count           = var.count
   ami_id          = var.ami_id
   instance_type   = var.instance_type
   subnet_id       = module.vpc.public_subnet_id
