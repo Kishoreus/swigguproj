@@ -10,12 +10,8 @@ variable "instance_type" {
   default = "t2.micro"
 }
 
-variable "ami_id" {
-  description = "Amazon Linux AMI"
-  default = data.aws_ami.aws_ami_name.id
-}
 
-variable "count" {
+variable "i_count" {
   type = number
   default = 1
 }
