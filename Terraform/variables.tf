@@ -13,3 +13,8 @@ variable "instance_type" {
 variable "ami_id" {
   description = "Amazon Linux AMI"
 }
+
+variable "count" {
+  type = number
+  default = 1
+}
