@@ -6,6 +6,6 @@ resource "aws_instance" "EC2" {
   vpc_security_group_ids  = [var.security_group]
 
   tags = {
-    Name = "${var.env}-ec2"
+    Name = "${var.env}-ec2-${count.index + 1}"
   }
 }
