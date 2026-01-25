@@ -19,6 +19,14 @@ resource "aws_security_group" "s_vpc" {
   }
 
   ingress {
+    description = "for app"
+    from_port   = 3000
+    to_port     = 3000
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
     description = "Port 9000"
     from_port   = 9000
     to_port     = 9000
