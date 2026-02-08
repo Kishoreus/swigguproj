@@ -1,5 +1,5 @@
 variable "aws_region" {
-  default = "eu-north-1"
+  default = "us-west-2"
 }
 
 variable "environment" {
@@ -7,11 +7,11 @@ variable "environment" {
 }
 
 variable "instance_type" {
-  default = "t3.micro"
+  default = "c7i-flex.large"
 }
 
 
 variable "i_count" {
   type = number
-  default = 2
+  default = 1
 }
