@@ -4,3 +4,4 @@ variable "subnet_id" {}
 variable "security_group" {}
 variable "env" {}
 variable "i_count" {}
+variable "instance_profile" {}
