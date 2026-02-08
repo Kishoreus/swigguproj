@@ -15,3 +15,7 @@ variable "i_count" {
   type = number
   default = 2
 }
+
+variable "instance_profile" {
+  default = "arn:aws:iam::960900884732:instance-profile/jenkins-instance-profile"
+}
