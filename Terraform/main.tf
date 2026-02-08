@@ -10,12 +10,13 @@ module "sg" {
 }
 
 module "ec2" {
-  source          = "./modules/EC2"
-  i_count         = var.i_count
-  ami_id          = data.aws_ami.aws_ami_name.id
-  instance_type   = var.instance_type
-  subnet_id       = module.vpc.public_subnet_id
-  security_group  = module.sg.sg_id
-  env             = var.environment
+  source                 = "./modules/EC2"
+  i_count                = var.i_count
+  ami_id                 = data.aws_ami.aws_ami_name.id
+  instance_type          = var.instance_type
+  iam_instance_profile   = arn:aws:iam::960900884732:instance-profile/jenkins-instance-profile
+  subnet_id              = module.vpc.public_subnet_id
+  security_group         = module.sg.sg_id
+  env                    = var.environment
 }
 
