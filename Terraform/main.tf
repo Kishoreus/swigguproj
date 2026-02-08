@@ -14,7 +14,7 @@ module "ec2" {
   i_count                = var.i_count
   ami_id                 = data.aws_ami.aws_ami_name.id
   instance_type          = var.instance_type
-  iam_instance_profile   = var.instance_profile
+  instance_profile       = var.instance_profile
   subnet_id              = module.vpc.public_subnet_id
   security_group         = module.sg.sg_id
   env                    = var.environment
